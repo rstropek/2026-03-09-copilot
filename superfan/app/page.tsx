@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -15,8 +16,12 @@ export default function Home() {
 					</h1>
 					<p className={styles.subtitle}>Your adventure begins here.</p>
 					<div className={styles.ctas}>
-						<button className={styles.btnPrimary}>GET STARTED</button>
-						<button className={styles.btnSecondary}>LEARN MORE</button>
+						<Link href="/heroes/new" className={styles.btnPrimary}>
+							GET STARTED
+						</Link>
+						<button type="button" className={styles.btnSecondary}>
+							LEARN MORE
+						</button>
 					</div>
 				</div>
 			</main>
