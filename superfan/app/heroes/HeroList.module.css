@@ -63,6 +63,26 @@
 	margin-bottom: 40px;
 }
 
+.filterRow {
+	margin-bottom: 32px;
+}
+
+.filterInput {
+	width: 100%;
+	max-width: 400px;
+	padding: 10px 16px;
+	border: 3px solid #000;
+	box-shadow: 4px 4px 0 #000;
+	font-size: 1rem;
+	font-family: inherit;
+	background-color: #fff;
+	outline: none;
+}
+
+.filterInput:focus {
+	box-shadow: 4px 4px 0 #ffe600;
+}
+
 .grid {
 	list-style: none;
 	padding: 0;

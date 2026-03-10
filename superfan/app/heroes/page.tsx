@@ -3,8 +3,13 @@ import { getAllHeroes } from "../../data/heroes";
 import HeroList from "./HeroList";
 import styles from "./HeroList.module.css";
 
-export default function HeroesPage() {
-	const heroes = getAllHeroes();
+interface HeroesPageProps {
+	searchParams: Promise<{ name?: string }>;
+}
+
+export default async function HeroesPage({ searchParams }: HeroesPageProps) {
+	const { name } = await searchParams;
+	const heroes = getAllHeroes(name);
 
 	return (
 		<div className={styles.container}>
@@ -15,7 +20,7 @@ export default function HeroesPage() {
 			</header>
 			<main className={styles.main}>
 				<h1 className={styles.title}>All Heroes</h1>
-				<HeroList heroes={heroes} />
+				<HeroList heroes={heroes} nameFilter={name} />
 			</main>
 		</div>
 	);
