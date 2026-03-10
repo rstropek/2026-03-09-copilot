@@ -19,9 +19,9 @@ export default function Home() {
 						<Link href="/heroes/new" className={styles.btnPrimary}>
 							GET STARTED
 						</Link>
-						<button type="button" className={styles.btnSecondary}>
-							LEARN MORE
-						</button>
+						<Link href="/heroes" className={styles.btnSecondary}>
+							ALL HEROES
+						</Link>
 					</div>
 				</div>
 			</main>

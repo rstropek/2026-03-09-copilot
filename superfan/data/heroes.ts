@@ -17,6 +17,13 @@ function rowToHero(row: HeroRow): Hero {
 	};
 }
 
+export function getAllHeroes(): Hero[] {
+	const rows = db
+		.prepare("SELECT * FROM heroes ORDER BY id DESC")
+		.all() as HeroRow[];
+	return rows.map(rowToHero);
+}
+
 export function createHero(input: CreateHeroInput): Hero {
 	const stmt = db.prepare(`
 		INSERT INTO heroes (name, real_name, first_appearance, super_powers, coolness_factor)

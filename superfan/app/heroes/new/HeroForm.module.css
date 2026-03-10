@@ -24,6 +24,24 @@
 	position: relative;
 	z-index: 2;
 	box-shadow: 3px 3px 0 #000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navLink {
+	font-family: var(--font-bangers);
+	font-size: 1rem;
+	letter-spacing: 0.06em;
+	color: #00e5ff;
+	text-decoration: none;
+	border: 2px solid #00e5ff;
+	padding: 6px 14px;
+}
+
+.navLink:hover {
+	background-color: #00e5ff;
+	color: #0d1b2a;
 }
 
 .logo {

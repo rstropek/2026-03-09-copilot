@@ -1,9 +1,5 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(npm ls:*)",
-      "Bash(npm run:*)",
-      "Bash(npx next:*)"
-    ]
-  }
+	"permissions": {
+		"allow": ["Bash(npm ls:*)", "Bash(npm run:*)", "Bash(npx next:*)"]
+	}
 }

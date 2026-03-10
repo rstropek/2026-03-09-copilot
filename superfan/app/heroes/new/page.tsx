@@ -9,6 +9,9 @@ export default function NewHeroPage() {
 				<Link href="/" className={styles.logo}>
 					SUPERFAN
 				</Link>
+				<Link href="/heroes" className={styles.navLink}>
+					All Heroes
+				</Link>
 			</header>
 			<main className={styles.main}>
 				<HeroForm />

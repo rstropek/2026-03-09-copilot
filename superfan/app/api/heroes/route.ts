@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
-import { createHero } from "../../../data/heroes";
+import { createHero, getAllHeroes } from "../../../data/heroes";
+
+export async function GET() {
+	const heroes = getAllHeroes();
+	return NextResponse.json(heroes, { status: 200 });
+}
 
 export async function POST(request: Request) {
 	const body = await request.json();
