@@ -22,6 +22,9 @@ export default function Home() {
 						<Link href="/heroes" className={styles.btnSecondary}>
 							ALL HEROES
 						</Link>
+						<Link href="/chat" className={styles.btnTertiary}>
+							CHAT WITH AI
+						</Link>
 					</div>
 				</div>
 			</main>

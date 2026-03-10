@@ -17,12 +17,17 @@ function rowToHero(row: HeroRow): Hero {
 	};
 }
 
+export function getHeroById(id: number): Hero | null {
+	const row = db.prepare("SELECT * FROM heroes WHERE id = ?").get(id) as
+		| HeroRow
+		| undefined;
+	return row ? rowToHero(row) : null;
+}
+
 export function getAllHeroes(nameFilter?: string): Hero[] {
 	const rows = nameFilter
 		? (db
-				.prepare(
-					"SELECT * FROM heroes WHERE name LIKE ? ORDER BY id DESC",
-				)
+				.prepare("SELECT * FROM heroes WHERE name LIKE ? ORDER BY id DESC")
 				.all(`%${nameFilter}%`) as HeroRow[])
 		: (db.prepare("SELECT * FROM heroes ORDER BY id DESC").all() as HeroRow[]);
 	return rows.map(rowToHero);
